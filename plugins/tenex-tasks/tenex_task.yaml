@@ -1,0 +1,16 @@
+name: tenex_task
+description: Create a detailed task with title and description for a project mentioned in the transcript
+type: or
+run: matching
+command: bun ./run/tenex_task.ts FILE
+prompt: |
+  Based on the following transcript, find the name of the project being worked on and create a detailed task with title and description.
+  
+  The extracted project name should be the first line of your response, followed by the raw transcript.
+  
+  Transcript:
+  {transcript}
+  
+  Project: <insert-project-name-here>
+  
+  {transcript}
